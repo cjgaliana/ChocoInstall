@@ -1,9 +1,9 @@
-echo "Install Chocolatey"
+echo "Installing Chocolatey"
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 :: Refresh envs
 refreshenv 
 :: -y => Say yes to all promts
-echo "Install apps"
+echo "Installing apps"
 cinst firefox -y
 cinst googlechrome -y
 cinst opera -y
